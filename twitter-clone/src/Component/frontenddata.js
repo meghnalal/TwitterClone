@@ -57,7 +57,7 @@ const Frontenddata = () => {
         },
         body: JSON.stringify(dataToSend)
       };
-      fetch("/api", requestOptions)
+      fetch("https://localhost:3003/api", requestOptions)
         .then(response => response.json())
         .then(data => {
           // Log the response from the backend
@@ -73,7 +73,7 @@ const Frontenddata = () => {
   //fetchdata from back end
  
    React.useEffect(() => {
-      fetch("/api")
+      fetch("http://localhost:3003/api")
         .then((res) => res.json())
         .then((data) => {
           // Log the response from fetching data from the backend
